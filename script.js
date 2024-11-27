@@ -1,5 +1,5 @@
 const clientId = "c832c8697d834f4ca7d46793f73410ca";
-const redirectUri = "http://localhost:8000/index.html"; // Update with your Netlify URL
+const redirectUri = "https://deskthing.stardomga.me/index.html"; // Update with your Netlify URL
 const scopes = "user-read-currently-playing user-read-playback-state user-modify-playback-state";
 
 let accessToken = getAccessToken();
