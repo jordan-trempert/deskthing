@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeskThing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <style> body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    }
+    #blurred-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(20px);
+    z-index: -1;
+    }
+    #content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: white;
+    }
+    </style>
+</head>
+<body>
+<div id="blurred-bg"></div>
+<button id="login-btn">Log in to Spotify</button>
+<div id="song-info" class="hidden">
+    <img id="album-art" src="" alt="Album Art">
+    <h1 id="song-name"></h1>
+    <h2 id="artist-name"></h2>
+    <div id="controls">
+        <div id="progress-container">
+            <span id="progress-time">0:00</span>
+            <input type="range" id="progress-bar" value="0">
+            <span id="duration-time">0:00</span>
+        </div>
+        <br />
+        <div id="buttons">
+            <button id="prev-btn"><img src="back.png" alt="Previous"></button>
+            <button id="play-pause-btn">
+                <i id="play-pause-icon" class="fas fa-play"></i>
+            </button>
+            <button id="next-btn"><img src="next.png" alt="Next"></button>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
